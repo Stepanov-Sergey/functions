@@ -39,7 +39,8 @@ class Swish:
 ''''
 TO DO:
 - Softsquare: `return np.power(np.clip(x, 0, 1), 2)`
-- Bent Identity 2: `return (np.sqrt(x * x + 1) - 1) / 2 + x`
+- Bent Identity  : `return (np.sqrt(x*x + 1) - 1) / 2 + x`
+- Cube: `return np.power(x, 3)`
 - HardTanh2: `return np.clip(x, -2, 2)`
 - LogLogLog: `return np.log(np.log(np.log(x + 1) + 1) + 1)`
 - Sigmoid-1: `return x * (1 / (1 + np.exp(-x)))`
@@ -71,14 +72,12 @@ TO DO:
 - Mish: return x * np.tanh(np.log(1 + np.exp(x)))
 - Softsign: `return x / (1 + np.abs(x))`
 - ArcTan: `return np.arctan(x)`
-- Bent Identity: `return (np.sqrt(x*x + 1) - 1) / 2 + x`- Cube: `return np.power(x, 3)`
 - Sinusoid: `return np.sin(x)`
 - Inverse Square Root Unit (ISRU): `return x / np.sqrt(1 + alpha * np.power(x, 2))` (where `alpha` is a hyperparameter)
 - SoftExponential: `return np.where(x < 0, -np.log(1 - alpha * (x + alpha)) / alpha, x)`
 - SineReLU: `return np.where(x > 0, np.sin(x), alpha * np.exp(x) - alpha)`
 - Gaussian: `return np.exp(-np.power(x, 2))`
 - ISRLU (Inverse Square Root Linear Unit): `return np.where(x > 0, x, x / np.sqrt(1 + alpha * np.power(x, 2)))` (where `alpha` is a hyperparameter)
-- Bent Identity: `return (np.sqrt(x * x + 1) - 1) / 2 + x`
 - LogLog: `return np.log(np.log(x + 1) + 1)`
 - SoftClip: `return np.clip(x, -alpha, alpha)`- HardSwish: `return x * np.clip(x + 3, 0, 6) / 6`
 - Symmetric Sigmoid: `return 2 / (1 + np.exp(-x)) - 1`
